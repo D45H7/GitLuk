@@ -1,6 +1,11 @@
 #!/usr/bin/python3.9
 
-import sys,requests
+try:
+  import sys,requests
+except:
+  import os
+  os.system('pip install requests')
+  quit('Jalankan ulang skrip')
 
 if len(sys.argv) == 2:
   url = "https://api.github.com/users/" + sys.argv[1]
